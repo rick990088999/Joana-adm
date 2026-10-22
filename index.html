@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Caos Administrativo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<header id="hud" class="hide">
+  <div class="top">
+    <div id="time">60</div>
+    <div class="cnt"><span>✅ <b id="done">0</b></span><span>📥 <b id="pend">0</b></span></div>
+    <button id="mute" aria-label="Som">🔊</button>
+  </div>
+  <div class="thirst"><span>💧</span><div class="bar"><i id="tbar"></i></div></div>
+  <div id="tasks"></div>
+</header>
+
+<div id="toast"></div>
+<div id="prog" class="hide"><i></i></div>
+<div id="hold" class="hide"></div>
+
+<div id="ctrl" class="hide">
+  <div id="joy"><i id="knob"></i></div>
+  <button id="act">—</button>
+</div>
+
+<main>
+  <section id="start" class="screen show">
+    <div class="emoji">🗂️📎🖨️</div>
+    <h1>CAOS<br>ADMINISTRATIVO</h1>
+    <p>60 segundos. Papéis, impressora, gerente e sede. Dê conta de tudo!</p>
+    <button class="btn" id="go">COMEÇAR O EXPEDIENTE</button>
+    <p class="kbd">💻 No computador: setas ou WASD para andar e ESPAÇO para agir</p>
+  </section>
+
+  <section id="result" class="screen">
+    <h1>FIM DO EXPEDIENTE!</h1>
+    <div class="stats">
+      <div><b id="r-done">0</b><span>concluídas</span></div>
+      <div><b id="r-pend">0</b><span>pendentes</span></div>
+      <div><b id="r-ret">0</b><span>devolvidos</span></div>
+    </div>
+    <p id="r-msg"></p>
+    <button class="btn" id="r-next">CONTINUAR</button>
+  </section>
+
+  <section id="reflect" class="screen">
+    <h1>Difícil, né?<br>Resolver os problemas do dia a dia?</h1>
+    <p>Agora imagine ter que fazer isso todos os dias!</p>
+    <button class="btn" id="f-next">SIM, DIFÍCIL MESMO!</button>
+  </section>
+
+  <section id="final" class="screen">
+    <p class="kicker">Para ajudar a resolver os perrengues do dia a dia...</p>
+    <div class="frame">
+      <img id="foto" src="joana.jpg" alt="Joana">
+      <div id="fallback" class="hide">👩‍💼</div>
+    </div>
+    <h2><small>VOTE</small>JOANA</h2>
+    <div class="num" aria-label="13131"><b>1</b><b>3</b><b>1</b><b>3</b><b>1</b></div>
+    <p class="slogan">Joana 13131: resolvendo perrengue com você!</p>
+    <div class="tag">GENTE QUE SURPREENDE</div>
+    <button class="btn small" id="again">JOGAR NOVAMENTE</button>
+    <div id="confetti"></div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
